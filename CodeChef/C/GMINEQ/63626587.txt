@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <math.h>
+// #define ll long long
+
+int main(void)
+{
+    int testmeee;
+    scanf("%d", &testmeee);
+    // for (int i = 0; i < testmeee; i++)
+    // {
+    //     printf("Aiman");
+    // }
+
+    for (int kkk = 0; kkk < testmeee; kkk++)
+    {
+        int noellee;
+        scanf("%d", &noellee);
+        int albedo[noellee];
+        for (int i = 0; i < noellee; i++)
+        {
+            scanf("%d", &albedo[i]);
+        }
+        int camelliaaa = 0, euthymiaaa = 0;
+        for (int i = 0; i < noellee; i++)
+        {
+            if (albedo[i] == -1)
+                euthymiaaa++;
+            else
+                camelliaaa++;
+        }
+
+        int diluc = fabs(camelliaaa - euthymiaaa);
+        // printf("diluc %d \n", diluc);
+        if (diluc == 1 || camelliaaa == euthymiaaa)
+        {
+            printf("YeS\n");
+        }
+        else if (diluc == 2)
+        {
+            int jutsu = camelliaaa % 2, orabashi = euthymiaaa % 2;
+            if (!jutsu && !orabashi)
+            {
+                printf("yEs\n");
+            }
+            else
+            {
+                printf("nO\n");
+            }
+        }
+        else
+        {
+            printf("No\n");
+        }
+    }
+
+    return 0;
+}
